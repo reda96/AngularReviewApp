@@ -3,10 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { SearchComponent } from './search/search.component';
+import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { ReviewListComponent } from './review-list/review-list.component';
+import { ReviewDetailComponent } from './review-detail/review-detail.component';
+import { AddReviewComponent } from './add-review/add-review.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    SearchComponent,
+    AdvancedSearchComponent,
+    SearchResultComponent,
+    ReviewListComponent,
+    ReviewDetailComponent,
+    AddReviewComponent
   ],
   imports: [
     BrowserModule,
