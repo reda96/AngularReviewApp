@@ -1,0 +1,43 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+form {
+  position: relative;
+  width: 50%;
+  left: 35%;
+  top: 15%;
+}
+.form-item {
+  margin: 20px;
+}
+.form-item > fa-icon {
+  position: absolute;
+  margin: 5px;
+  padding: 8px;
+  color: #5022ea;
+  border-radius: 20px;
+  background-color: #f7f4f9;
+}
+input {
+  width: 60%;
+  height: 25px;
+  outline: none;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+}
+
+button {
+  width: 60%;
+  outline: none;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  background-color: #5022ea;
+  color: #f7f4f9;
+}
