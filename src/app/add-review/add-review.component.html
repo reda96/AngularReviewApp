@@ -1,1 +1,36 @@
-<p>add-review works!</p>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-item">
+        <label class="item-label" for="">Doctor Name</label>
+        <input type="text" placeholder="Ex. John">
+    </div>
+    <div class="form-item">
+        <label class="item-label" for="name">Rate your experience</label>
+        <br>
+        <fa-icon [icon]="faStar" #one></fa-icon>
+        <fa-icon [icon]="faStar" #two></fa-icon>
+        <fa-icon [icon]="faStar" #three></fa-icon>
+        <fa-icon [icon]="faStar" #four></fa-icon>
+        <fa-icon [icon]="faStar" #five></fa-icon>
+    </div>
+    <div class="form-item">
+        <label class="item-label" for="">Write Review</label>
+        <input type="text" placeholder="Write your expoerience">
+    </div>
+    <div class="form-item">
+        <label class="item-label" for="">Add keywords</label>
+        <input type="text" placeholder="Write your expoerience">
+    </div>
+    <div class="form-item">
+
+        <label for="myfile">Select files:</label>
+        <br>
+        <br>
+        <button class="attachment" (click)="attach.click()">
+            <fa-icon [icon]="faPaperclip"></fa-icon>Attach Photo
+        </button>
+        <input type="file" id="myfile" name="myfile" multiple placeholder="attach files" #attach>
+    </div>
+    <br>
+    <br>
+    <button class="submit">Publish Review</button>
+</form>

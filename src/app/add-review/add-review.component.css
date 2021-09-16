@@ -1,0 +1,57 @@
+form {
+  position: relative;
+  background-color: white;
+  width: 50%;
+  left: 25%;
+  margin: 30px;
+  padding: 30px;
+}
+.form-item {
+  display: block;
+  margin-top: 20px;
+}
+input {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  padding: 5px;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid gray;
+}
+input:focus {
+  border-bottom: 1px solid;
+}
+.item-label {
+  display: block;
+}
+fa-icon {
+  margin-top: 20px;
+}
+fa-icon:hover {
+  cursor: pointer;
+  color: rgb(255, 193, 7);
+}
+#myfile {
+  display: none;
+}
+.attachment {
+  display: block;
+  text-align: center;
+  border: 1px dashed #99b8b6;
+  background-color: #cff3e4;
+  width: 100%;
+  padding: 20px;
+  border-radius: 27px;
+  color: #99b8b6;
+}
+.submit {
+  background-color: #465c59;
+  color: white;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}

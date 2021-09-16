@@ -24,6 +24,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@logisticinfotech/rating-component": "^1.0.6",
     "bootstrap": "^5.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
