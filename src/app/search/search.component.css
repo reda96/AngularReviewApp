@@ -17,7 +17,7 @@ form {
   position: absolute;
   margin: 5px;
   padding: 8px;
-  color: #5022ea;
+  color: #465c59;
   border-radius: 20px;
   background-color: #f7f4f9;
 }
@@ -32,12 +32,12 @@ input {
 }
 
 button {
-  width: 60%;
+  width: 50%;
   outline: none;
   padding: 15px;
   border-radius: 20px;
   border: none;
   text-align: center;
-  background-color: #5022ea;
+  background-color: #465c59;
   color: #f7f4f9;
 }

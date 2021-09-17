@@ -19,7 +19,7 @@ input {
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #f2f1fb;
 }
 input:focus {
   border-bottom: 1px solid;

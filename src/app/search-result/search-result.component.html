@@ -1,1 +1,65 @@
-<p>search-result works!</p>
+<div>
+    <div *ngFor="let dr of result;let i = index">
+
+        <div class="result-item">
+            <div>
+                <img class="doctor-image"
+                    src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/32068/_next/static/images/avatar.png"
+                    alt="">
+            </div>
+            <div>
+                <h3 style="color: rgb(0, 112, 205);margin-bottom: 0;"><span
+                        style="vertical-align: top;font-size: 14px;">Doctor</span>{{dr.name}}
+                </h3>
+                <p style="margin-top: 0;">
+                    {{dr.title}}
+                </p>
+
+                <div>
+                    <div class="back-stars">
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <div class="front-stars" [style.width.px]="dr.rating * 18">
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                            <fa-icon [icon]="faStar"></fa-icon>
+                        </div>
+                    </div>
+
+
+                </div>
+                <br>
+                <div>
+                    <span style="color:rgb(0, 112, 205);">
+                        <fa-icon size="xs"
+                            style="padding-bottom: 2px; border-bottom:1.4px solid rgb(239, 15, 15);color:rgb(0, 112, 205);"
+                            [icon]="faStethoscope">
+                        </fa-icon> specialized in:
+                    </span>
+                    <span *ngFor="let sp of dr.specialization;let i = index">{{sp}}, </span>
+
+                </div>
+                <br>
+                <div>
+                    <span>
+                        <fa-icon rotate="90" size="xs"
+                            style="padding-bottom: 2px; border-bottom:1.4px solid rgb(239, 15, 15);color:rgb(0, 112, 205);"
+                            [icon]="faMoney"></fa-icon> fees: {{dr.fees}} EGP
+                    </span>
+                </div>
+                <br>
+                <div>
+                    <span>
+                        <fa-icon size="xs"
+                            style="padding-bottom: 2px;; border-bottom:1.4px solid rgb(239, 15, 15);color:rgb(0, 112, 205);"
+                            [icon]="faMap"></fa-icon> {{ dr.city}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>

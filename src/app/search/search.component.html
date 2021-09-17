@@ -1,11 +1,14 @@
 <div class="container">
-    <form>
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
         <div class="form-item">
             <fa-icon [icon]="faSearch"></fa-icon>
-            <input placeholder="Type your doctor name" type="text">
+            <input placeholder="Type your doctor name" type="text" formControlName='name'>
         </div>
 
+        <div style="display: flex;justify-content: space-between;">
+            <button type="submit" class="form-item">Search</button>
+            <button type="button" class="form-item" routerLink="/advanced-search">advanced Search</button>
+        </div>
 
-        <button class="form-item">advanced Search</button>
     </form>
 </div>

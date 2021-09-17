@@ -23,11 +23,13 @@ li {
   padding: 10px;
 }
 li:hover {
-  background-color: #5022ea;
+  background-color: #99b8b6;
+  color: white;
 }
 a {
   text-decoration: none;
 }
+
 .navbar a {
   color: #333;
 }
