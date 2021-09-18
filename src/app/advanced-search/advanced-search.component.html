@@ -1,13 +1,14 @@
-<form>
+<form ngForm (ngSubmit)="onSubmit()" #form="ngForm">
 
     <div class="form-item">
         <label for="">Doctor Name</label>
-        <input type="text" placeholder="Ex. John">
+        <input ngModel name="name" type="text" placeholder="Ex. John">
     </div>
 
     <div class="form-item">
         <label for="">Choose city</label>
-        <select name="city" id="city">
+        <select aria-placeholder="city" ngModel name="city" id="city">
+            <option value="" disabled selected hidden>Choose a city</option>
             <option value="Cairo">Cairo</option>
             <option value="Menia">Menia</option>
             <option value="Alexandria">Alexandria</option>
@@ -18,17 +19,18 @@
 
     <div class="form-item">
         <label for="">Choose Specialization</label>
-        <select name="specialization" id="specia;ization">
-            <option value="Cardiologist">Cardiologist</option>
-            <option value="Gastroenterologist">Gastroenterologist</option>
-            <option value="Immunologist">Immunologist</option>
-            <option value="Dermatologist">Dermatologist</option>
-            <option value="General Surgeon">General Surgeon</option>
-            <option value="hematologist ">Hematologist</option>
-            <option value="Dentist">Dentist</option>
+        <select ngModel name="specialization" id="specia;ization">
+            <option value="" disabled selected hidden>Choose an specialization</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Gastroenterology">Gastroenterology</option>
+            <option value="Immunology">Immunology</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="General Surgery">General Surgery</option>
+            <option value="Nutrition ">Nutrition</option>
+            <option value="Dentistry">Dentistry</option>
         </select>
     </div>
     <br>
     <br>
-    <button class="submit">Search</button>
+    <button type="submit" class="submit">Search</button>
 </form>

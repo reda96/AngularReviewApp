@@ -7,7 +7,24 @@ import { Router } from '@angular/router';
 })
 export class DoctorsService {
   searchResult = new BehaviorSubject<Doctor[]>(null);
+  advancedSearchResult = new BehaviorSubject<Doctor[]>(null);
   doctors: Doctor[] = [
+    new Doctor(
+      'Mohamed El Sherif',
+      'Professor of surgery , Consultant surgeon MB.CH.B',
+      4.3,
+      220,
+      ['Pediatric General Surgery', 'Abdominal Surgery', 'Endocrinal Surgery'],
+      'Alexandria'
+    ),
+    new Doctor(
+      'Yasser Elnahas',
+      'Professor of Cardiothoracic surgeryCardiothoracic Surgeon',
+      4.5,
+      300,
+      [' Adult Cardiology Surgery'],
+      'Cairo'
+    ),
     new Doctor(
       'Hany Khalil',
       'Consultant in Cosmetic Dermatology and Andrology',
@@ -65,6 +82,28 @@ export class DoctorsService {
     const result = ds.filter((dr) => dr.name.toLowerCase().includes(name));
     console.log(result);
     this.searchResult.next(result);
+    this.router.navigate(['result']);
+  }
+  onAdvancedSearch(name: string, city: string, spec: string) {
+    console.log(name, city, spec);
+
+    const ds = this.doctors.slice();
+    let result = ds;
+    if (name) {
+      result = result.filter((dr) =>
+        dr.name.toLowerCase().includes(name.toLowerCase())
+      );
+    }
+    if (city) {
+      result = result.filter((dr) => dr.city === city);
+    }
+    if (spec) {
+      result = result.filter((dr) =>
+        dr.specialization.join(' ').toLowerCase().includes(spec.toLowerCase())
+      );
+    }
+
+    this.advancedSearchResult.next(result);
     this.router.navigate(['result']);
   }
 }

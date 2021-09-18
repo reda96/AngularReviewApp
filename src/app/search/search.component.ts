@@ -18,9 +18,6 @@ export class SearchComponent implements OnInit {
     this.searchForm = new FormGroup({
       name: new FormControl(doctorName, Validators.required),
     });
-    this.dcService.searchResult.subscribe((result) => {
-      console.log(result);
-    });
   }
   onSubmit() {
     let name = this.searchForm.value['name'];

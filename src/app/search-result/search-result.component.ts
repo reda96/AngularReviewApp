@@ -20,18 +20,24 @@ export class SearchResultComponent implements OnInit, OnDestroy {
   faStethoscope = faStethoscope;
   result: Doctor[];
   resultSub: Subscription;
+  advancedSearchresultSub: Subscription;
   constructor(private dcService: DoctorsService) {}
 
   ngOnInit(): void {
     this.resultSub = this.dcService.searchResult.subscribe(
       (result: Doctor[]) => {
-        this.result = result;
+        if (result) this.result = result;
       }
     );
+    this.advancedSearchresultSub =
+      this.dcService.advancedSearchResult.subscribe((result: Doctor[]) => {
+        if (result) this.result = result;
+      });
   }
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
     this.resultSub.unsubscribe();
+    this.advancedSearchresultSub.unsubscribe();
   }
 }
